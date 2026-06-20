@@ -118,31 +118,10 @@ InternTraining/
 
 ## Screenshots
 
-### Main Dashboard
+<img width="1470" height="956" alt="Screenshot 2026-06-20 at 6 37 17 PM" src="https://github.com/user-attachments/assets/5278aa50-57fa-46da-8991-46779da42546" />
 
-Add a screenshot of your Streamlit interface here.
 
-```markdown
-![Dashboard](screenshots/dashboard.png)
-```
 
-### Voice Interaction
-
-Add a screenshot showing voice input and AI response generation.
-
-```markdown
-![Voice Interaction](screenshots/voice_interaction.png)
-```
-
-### Conversation Evaluation
-
-Add a screenshot of the scoring and feedback section.
-
-```markdown
-![Evaluation](screenshots/evaluation.png)
-```
-
-> Create a folder named `screenshots` in the repository root and place your images there.
 
 ---
 
@@ -293,16 +272,6 @@ streamlit run streamlit_chat.py
 * Emotion-Aware AI Agents
 * VR Training Environment
 * Enterprise Management Dashboard
-
----
-
-## Author
-
-### Vani Arya
-
-B.Tech Computer Science Engineering
-
-Interested in Artificial Intelligence, Machine Learning, Conversational AI, XR Technologies, and Immersive Training Systems.
 
 ---
 
