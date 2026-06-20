@@ -1,48 +1,56 @@
 # AI Sales Training Simulator
 
-An AI-powered sales training platform that simulates realistic customer interactions and provides instant feedback on communication, persuasion, and sales effectiveness.
+An AI-powered sales training platform that simulates realistic customer interactions and provides instant feedback on communication, persuasion, confidence, and sales effectiveness.
+
+The project aims to provide a safe and realistic environment for trainees to practice sales conversations with AI-generated customers before engaging with real clients.
 
 ---
 
 ## Overview
 
-This project is an intelligent sales training system designed to help trainees practice conversations with AI-powered customers in realistic business scenarios.
+AI Sales Training Simulator is an intelligent conversational training system that combines Large Language Models (LLMs), Speech-to-Text (STT), and Text-to-Speech (TTS) technologies to create realistic sales practice scenarios.
 
-The current version includes a Streamlit-based conversational interface with Speech-to-Text (STT) and Text-to-Speech (TTS) capabilities, allowing users to interact naturally through voice.
+Users can communicate with an AI-powered customer using voice or text, receive dynamic responses, and get performance evaluations based on their sales approach and communication skills.
+
+The current version serves as the foundation for a future VR-based immersive training platform.
 
 ---
 
-## Current Features
+## Features
 
 ### AI Customer Simulation
 
-* Dynamic AI-generated customer/shopkeeper responses
+* Dynamic AI-generated customer responses
 * Context-aware conversations
 * Realistic sales interaction flow
+* Adaptive customer behavior
 
-### Performance Evaluation
+### Conversation Evaluation
 
-* Automated conversation scoring
+* Automated sales performance scoring
+* Communication skill assessment
 * Real-time feedback generation
-* Sales communication assessment
+* Conversation quality analysis
 
-### Voice Interaction
+### Voice-Based Interaction
 
 * Speech-to-Text using Faster Whisper
 * Text-to-Speech using Edge TTS
-* Hands-free conversational experience
+* Natural voice conversations
+* Audio response generation
 
 ### Real-Time Communication
 
-* FastAPI backend
-* WebSocket-based communication
+* FastAPI backend services
 * Low-latency interactions
+* Scalable API architecture
 
 ### Interactive Dashboard
 
-* Streamlit user interface
-* Chat-based conversation experience
-* Real-time score display
+* Streamlit-based interface
+* Real-time chat experience
+* Voice input support
+* Instant AI responses
 
 ---
 
@@ -55,15 +63,14 @@ The current version includes a Streamlit-based conversational interface with Spe
 ### Backend
 
 * FastAPI
-* WebSockets
 
-### AI & NLP
+### Artificial Intelligence
 
-* LLM Integration
+* Large Language Models (LLMs)
 * Faster Whisper
 * Edge TTS
 
-### Language
+### Programming Language
 
 * Python
 
@@ -72,35 +79,70 @@ The current version includes a Streamlit-based conversational interface with Spe
 ## Project Structure
 
 ```text
-ai_backend/
+InternTraining/
 │
-├── main.py
-├── requirements.txt
-├── config.py
-│
-├── ai/
-│   ├── stt.py
-│   ├── tts.py
-│   ├── llm.py
-│   ├── scorer.py
-│   └── npc_generator.py
-│
-├── db/
-│   ├── models.py
-│   ├── crud.py
-│   └── database.py
-│
-├── routers/
-│   ├── sessions.py
-│   └── interns.py
-│
-├── prompts/
-│   ├── npc_base.txt
-│   └── scorer_judge.txt
-│
-└── dashboard/
-    └── app.py
+└── ai_backend/
+    │
+    ├── ai/
+    │   ├── llm.py
+    │   ├── scorer.py
+    │   ├── stt.py
+    │   └── tts.py
+    │
+    ├── venv/
+    │
+    ├── .env
+    ├── .gitignore
+    ├── main.py
+    ├── npc_response.mp3
+    ├── README.md
+    ├── requirements.txt
+    └── streamlit_chat.py
 ```
+
+### File Description
+
+| File                | Description                         |
+| ------------------- | ----------------------------------- |
+| `main.py`           | FastAPI backend entry point         |
+| `streamlit_chat.py` | Streamlit frontend application      |
+| `ai/llm.py`         | AI customer response generation     |
+| `ai/scorer.py`      | Sales conversation evaluation logic |
+| `ai/stt.py`         | Speech-to-Text processing           |
+| `ai/tts.py`         | Text-to-Speech generation           |
+| `.env`              | Environment variables               |
+| `requirements.txt`  | Project dependencies                |
+| `npc_response.mp3`  | Generated AI voice response         |
+
+---
+
+## Screenshots
+
+### Main Dashboard
+
+Add a screenshot of your Streamlit interface here.
+
+```markdown
+![Dashboard](screenshots/dashboard.png)
+```
+
+### Voice Interaction
+
+Add a screenshot showing voice input and AI response generation.
+
+```markdown
+![Voice Interaction](screenshots/voice_interaction.png)
+```
+
+### Conversation Evaluation
+
+Add a screenshot of the scoring and feedback section.
+
+```markdown
+![Evaluation](screenshots/evaluation.png)
+```
+
+> Create a folder named `screenshots` in the repository root and place your images there.
 
 ---
 
@@ -109,17 +151,18 @@ ai_backend/
 ### Completed
 
 * FastAPI backend setup
-* WebSocket communication
-* AI conversation generation
+* AI customer response generation
 * Conversation scoring engine
 * Streamlit dashboard
 * Speech-to-Text integration
 * Text-to-Speech integration
+* Voice-enabled conversation flow
 
 ### In Progress
 
 * Session management
 * Database integration
+* Conversation history storage
 * Analytics dashboard
 * Enhanced evaluation metrics
 
@@ -127,29 +170,25 @@ ai_backend/
 
 ## Future Vision: VR Sales Training Platform
 
-The Streamlit application is the first prototype of a larger AI-powered training ecosystem.
+The current Streamlit application is the first prototype of a larger AI-powered training ecosystem.
 
-The long-term goal is to build an immersive Virtual Reality (VR) sales training platform where trainees can practice customer interactions in realistic environments and receive detailed AI-driven feedback.
+The long-term vision is to build a fully immersive Virtual Reality sales training environment where trainees can practice customer interactions in realistic retail scenarios.
 
-### Planned VR Experience
+### Planned VR Features
 
-Users will enter a virtual retail environment and interact with AI-controlled customers.
-
-The AI customer will be capable of:
-
-* Asking product-related questions
-* Raising objections
-* Negotiating prices
-* Demonstrating different personalities
-* Reacting dynamically to trainee behavior
-
-Voice communication will occur naturally while the AI continuously evaluates performance.
+* AI-powered virtual customers
+* Real-time voice conversations
+* Interactive retail environments
+* Customer objection handling
+* Negotiation simulations
+* Dynamic customer personalities
+* Real-time performance assessment
 
 ---
 
 ## Intelligent Evaluation System
 
-The platform will assess:
+Future versions will evaluate:
 
 * Communication Skills
 * Product Knowledge
@@ -162,32 +201,20 @@ The platform will assess:
 
 ---
 
-## Management Dashboard
-
-Future versions will provide trainer and manager dashboards for:
-
-* Progress Tracking
-* Session Review
-* Performance Comparison
-* Automated Reports
-* Long-Term Skill Analysis
-
----
-
 ## Upcoming Versions
 
 ### Version 2
 
 * User Authentication
-* Persistent Session Storage
+* Session Management
+* Persistent Storage
 * Conversation History
-* Enhanced Analytics
 
 ### Version 3
 
 * Multiple Customer Personas
-* Industry-Specific Scenarios
-* AI Coaching Recommendations
+* Industry-Specific Training Scenarios
+* Personalized AI Coaching
 * Performance Trend Tracking
 
 ### Version 4
@@ -207,15 +234,16 @@ Future versions will provide trainer and manager dashboards for:
 
 ## Potential Applications
 
-Although currently focused on sales training, the platform can be extended for:
+The platform can be adapted for:
 
+* Sales Training
 * Customer Service Training
 * Interview Preparation
 * Retail Staff Training
 * Corporate Communication Training
 * Negotiation Practice
+* Public Speaking Training
 * Soft Skills Development
-* Public Speaking Simulation
 
 ---
 
@@ -225,7 +253,7 @@ Although currently focused on sales training, the platform can be extended for:
 
 ```bash
 git clone https://github.com/vaniarya/InternTraining.git
-cd InternTraining
+cd InternTraining/ai_backend
 ```
 
 ### Create Virtual Environment
@@ -241,13 +269,13 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Start Backend
+### Run FastAPI Backend
 
 ```bash
 uvicorn main:app --reload
 ```
 
-### Start Streamlit Application
+### Run Streamlit Application
 
 ```bash
 streamlit run streamlit_chat.py
@@ -257,20 +285,25 @@ streamlit run streamlit_chat.py
 
 ## Roadmap
 
-* AI-powered customer simulation
-* Voice-first training experience
-* Performance analytics dashboard
-* Multi-persona customer interactions
-* Emotion-aware AI agents
-* VR-based immersive training
-* Enterprise-scale deployment
+* AI Customer Simulation
+* Voice-Based Training
+* Database Integration
+* Analytics Dashboard
+* Multi-Persona Scenarios
+* Emotion-Aware AI Agents
+* VR Training Environment
+* Enterprise Management Dashboard
 
 ---
 
 ## Author
 
-**Vani Arya**
+### Vani Arya
 
 B.Tech Computer Science Engineering
 
-Interested in Artificial Intelligence, Machine Learning, Conversational AI, and Immersive Training Technologies.
+Interested in Artificial Intelligence, Machine Learning, Conversational AI, XR Technologies, and Immersive Training Systems.
+
+---
+
+⭐ If you find this project interesting, consider giving the repository a star.
