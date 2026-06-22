@@ -12,7 +12,7 @@ AI Sales Training Simulator is an intelligent conversational training system tha
 
 Users can communicate with an AI-powered customer using voice or text, receive dynamic responses, and get performance evaluations based on their sales approach and communication skills.
 
-The current version serves as the foundation for a future VR-based immersive training platform.
+The current version serves as the foundation for a future VR-based immersive gaming platform.
 
 ---
 
